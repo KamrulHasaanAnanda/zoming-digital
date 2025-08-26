@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+      <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -18,15 +18,15 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#home" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                <a href="#services" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
-                <a href="#about" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                <a href="#team" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Team</a>
-                <a href="#contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                <a href="#home" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                <a href="#services" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                <a href="#about" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                <a href="#team" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Team</a>
+                <a href="#contact" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
             <div className="md:hidden">
-              <button className="text-gray-900 hover:text-blue-600">
+              <button className="text-white hover:text-blue-400">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -37,14 +37,14 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 bg-gradient-to-br from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="home" className="min-h-screen pt-16 dark-bg flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Transform Your <span className="text-blue-600">Digital Presence</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Transform Your <span className="text-blue-400">Digital Presence</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 We help businesses grow online with comprehensive digital marketing solutions.
                 From SEO to social media, we create strategies that drive real results.
               </p>
@@ -52,7 +52,7 @@ export default function Home() {
                 <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Get Started
                 </button>
-                <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                <button className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                   Learn More
                 </button>
               </div>
@@ -71,30 +71,30 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="min-h-screen py-20 bg-gray-800 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We offer a comprehensive suite of digital marketing services to help your business thrive online.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* SEO */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="dark-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:dark-card-hover">
+              <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-xl font-semibold text-white mb-4">Search Engine Optimization</h3>
+              <p className="text-gray-300 mb-4">
                 Improve your website's visibility in search results and drive organic traffic to your business.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2">
                 <li>• Keyword Research & Strategy</li>
                 <li>• On-Page & Technical SEO</li>
                 <li>• Content Optimization</li>
@@ -201,30 +201,30 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="min-h-screen py-20 bg-gray-900 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 About Zoming Digital
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 We are a passionate team of digital marketing experts dedicated to helping businesses
                 achieve their online goals. With years of experience and a proven track record,
                 we deliver results that matter.
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 Our approach combines creativity, data-driven insights, and cutting-edge technology
                 to create marketing strategies that drive growth and maximize ROI for our clients.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-gray-600">Happy Clients</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+                  <div className="text-gray-300">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
-                  <div className="text-gray-600">Projects Completed</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">1000+</div>
+                  <div className="text-gray-300">Projects Completed</div>
                 </div>
               </div>
             </div>
@@ -236,13 +236,13 @@ export default function Home() {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-10 animate-pulse delay-500"></div>
 
                 {/* Main floating card */}
-                <div className="relative z-10 bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
+                <div className="relative z-10 dark-card rounded-3xl shadow-2xl p-8 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
                   {/* Glowing border effect */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
 
                   {/* Logo section with gradient background */}
                   <div className="relative text-center mb-8">
-                    <div className="inline-block p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl mb-4">
+                    <div className="inline-block p-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl mb-4">
                       <Image
                         src="/ZD.png"
                         alt="Zoming Digital"
@@ -251,41 +251,41 @@ export default function Home() {
                         className="mx-auto"
                       />
                     </div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                       Digital Marketing Excellence
                     </h3>
-                    <p className="text-gray-500 text-sm font-medium">Since 2020</p>
+                    <p className="text-gray-400 text-sm font-medium">Since 2020</p>
                   </div>
 
                   {/* Animated stats with hover effects */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="group/stat text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                      <div className="text-3xl font-bold text-blue-600 group-hover/stat:text-blue-700 transition-colors">500+</div>
-                      <div className="text-xs text-gray-600 font-medium">Happy Clients</div>
+                    <div className="group/stat text-center p-4 bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl border border-blue-700 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                      <div className="text-3xl font-bold text-blue-400 group-hover/stat:text-blue-300 transition-colors">500+</div>
+                      <div className="text-xs text-gray-300 font-medium">Happy Clients</div>
                     </div>
-                    <div className="group/stat text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                      <div className="text-3xl font-bold text-green-600 group-hover/stat:text-green-700 transition-colors">1000+</div>
-                      <div className="text-xs text-gray-600 font-medium">Projects</div>
+                    <div className="group/stat text-center p-4 bg-gradient-to-br from-green-900/50 to-green-800/50 rounded-xl border border-green-700 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                      <div className="text-3xl font-bold text-green-400 group-hover/stat:text-green-300 transition-colors">1000+</div>
+                      <div className="text-xs text-gray-300 font-medium">Projects</div>
                     </div>
                   </div>
 
                   {/* Interactive service highlights */}
                   <div className="space-y-4">
-                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-blue-50 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-blue-100">
-                      <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
-                      <span className="text-gray-700 font-medium">SEO & Content Marketing</span>
+                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-blue-900/30 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-blue-900/50">
+                      <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
+                      <span className="text-gray-200 font-medium">SEO & Content Marketing</span>
                     </div>
-                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-green-50 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-green-100">
-                      <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-green-600 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
-                      <span className="text-gray-700 font-medium">PPC & Social Media Ads</span>
+                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-green-900/30 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-green-900/50">
+                      <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
+                      <span className="text-gray-200 font-medium">PPC & Social Media Ads</span>
                     </div>
-                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-purple-50 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-purple-100">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
-                      <span className="text-gray-700 font-medium">Web Design & Development</span>
+                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-purple-900/30 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-purple-900/50">
+                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
+                      <span className="text-gray-200 font-medium">Web Design & Development</span>
                     </div>
-                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-orange-50 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-orange-100">
-                      <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
-                      <span className="text-gray-700 font-medium">Analytics & Reporting</span>
+                    <div className="group/service flex items-center p-3 bg-gradient-to-r from-orange-900/30 to-transparent rounded-xl transform transition-all duration-300 hover:scale-102 hover:bg-orange-900/50">
+                      <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full mr-4 group-hover/service:scale-125 transition-transform"></div>
+                      <span className="text-gray-200 font-medium">Analytics & Reporting</span>
                     </div>
                   </div>
 
@@ -301,13 +301,13 @@ export default function Home() {
       </section>
 
       {/* Our Team Section */}
-      <section id="team" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="team" className="min-h-screen py-20 bg-gray-800 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our talented team of digital marketing experts is dedicated to delivering exceptional results for your business.
             </p>
           </div>
@@ -315,7 +315,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Team Member 1 - CEO */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="dark-card rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:dark-card-hover">
                 <div className="relative mb-6">
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold mb-4">
                     JD
@@ -324,18 +324,18 @@ export default function Home() {
                     CEO
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
-                <p className="text-blue-600 font-medium mb-3">Chief Executive Officer</p>
-                <p className="text-gray-600 text-sm mb-4">
+                <h3 className="text-xl font-semibold text-white mb-2">John Doe</h3>
+                <p className="text-blue-400 font-medium mb-3">Chief Executive Officer</p>
+                <p className="text-gray-300 text-sm mb-4">
                   10+ years of experience in digital marketing and business strategy.
                 </p>
                 <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">
+                  <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">
+                  <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                     </svg>
@@ -441,73 +441,73 @@ export default function Home() {
           {/* Team Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
-              <div className="text-gray-600 font-medium">Team Members</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
+              <div className="text-gray-300 font-medium">Team Members</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">8+</div>
-              <div className="text-gray-600 font-medium">Years Experience</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">8+</div>
+              <div className="text-gray-300 font-medium">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">Certifications</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-gray-300 font-medium">Certifications</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600 font-medium">Support</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300 font-medium">Support</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="min-h-screen py-20 bg-gray-900 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Let's discuss how we can help your business grow online. Contact us today for a free consultation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Get In Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Email</div>
-                    <div className="text-gray-600">hello@zomingdigital.com</div>
+                    <div className="font-semibold text-white">Email</div>
+                    <div className="text-gray-300">hello@zomingdigital.com</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Phone</div>
-                    <div className="text-gray-600">+1 (555) 123-4567</div>
+                    <div className="font-semibold text-white">Phone</div>
+                    <div className="text-gray-300">+1 (555) 123-4567</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Address</div>
-                    <div className="text-gray-600">123 Digital Street, Tech City, TC 12345</div>
+                    <div className="font-semibold text-white">Address</div>
+                    <div className="text-gray-300">123 Digital Street, Tech City, TC 12345</div>
                   </div>
                 </div>
               </div>
@@ -517,25 +517,25 @@ export default function Home() {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                    <label className="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                    <input type="text" className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400" placeholder="Enter your first name" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                    <input type="text" className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400" placeholder="Enter your last name" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                  <input type="email" className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400" placeholder="Enter your email" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                  <input type="text" className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400" placeholder="Enter your company name" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                  <textarea rows={4} className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400" placeholder="Enter your message"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Send Message
