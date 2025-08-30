@@ -1,0 +1,16 @@
+{
+    "name": "Zoomin Digital",
+    "short_name": "Zoomin",
+    "description": "Performance-driven marketing & creative engineering for brands that want compounding growth",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0E1116",
+    "theme_color": "#1E90FF",
+    "icons": [
+        {
+            "src": "/ZD.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

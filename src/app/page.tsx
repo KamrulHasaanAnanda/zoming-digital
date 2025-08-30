@@ -1,6 +1,14 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Navigation */}
@@ -19,20 +27,67 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#home" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                <a href="#services" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                <a href="/services" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Services</a>
                 <a href="#about" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">About</a>
                 <a href="#team" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Team</a>
                 <a href="#contact" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
             <div className="md:hidden">
-              <button className="text-white hover:text-blue-400">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-white hover:text-blue-400 transition-colors"
+                aria-label="Toggle mobile menu"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700">
+                <a
+                  href="#home"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                  href="/services"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Services
+                </a>
+                <a
+                  href="#about"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="#team"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Team
+                </a>
+                <a
+                  href="#contact"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -78,122 +133,200 @@ export default function Home() {
               Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer a comprehensive suite of digital marketing services to help your business thrive online.
+              We offer comprehensive digital marketing solutions to help your business thrive in the digital landscape.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* SEO */}
+            {/* Social Media Marketing */}
             <div className="dark-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:dark-card-hover">
-              <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Search Engine Optimization</h3>
-              <p className="text-gray-300 mb-4">
-                Improve your website's visibility in search results and drive organic traffic to your business.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Keyword Research & Strategy</li>
-                <li>• On-Page & Technical SEO</li>
-                <li>• Content Optimization</li>
-                <li>• Local SEO</li>
-              </ul>
-            </div>
-
-            {/* PPC */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pay-Per-Click Advertising</h3>
-              <p className="text-gray-600 mb-4">
-                Drive targeted traffic and generate leads with strategic PPC campaigns across multiple platforms.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Google Ads Management</li>
-                <li>• Social Media Ads</li>
-                <li>• Remarketing Campaigns</li>
-                <li>• Conversion Optimization</li>
-              </ul>
-            </div>
-
-            {/* Social Media */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Social Media Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                Build brand awareness and engage with your audience across all major social media platforms.
+              <h3 className="text-xl font-semibold text-white mb-4">Social Media Marketing (SMM)</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive social media strategies to boost your brand presence
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Content Strategy</li>
-                <li>• Community Management</li>
-                <li>• Influencer Partnerships</li>
-                <li>• Performance Analytics</li>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Social media strategy development</li>
+                <li>• Content creation and management</li>
+                <li>• Paid ad campaigns (Facebook, Instagram, LinkedIn)</li>
+                <li>• Community management (comments, inboxes, DMs)</li>
+                <li>• Influencer marketing</li>
               </ul>
             </div>
 
-            {/* Web Design */}
+            {/* Search Engine Optimization */}
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Web Design & Development</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization (SEO)</h3>
               <p className="text-gray-600 mb-4">
-                Create stunning, responsive websites that convert visitors into customers.
+                Improve your search rankings and drive organic traffic
               </p>
               <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Responsive Design</li>
-                <li>• E-commerce Solutions</li>
-                <li>• Custom Development</li>
-                <li>• Website Maintenance</li>
+                <li>• On-page SEO (meta tags, keywords, URL structure)</li>
+                <li>• Off-page SEO (backlinks, guest posts)</li>
+                <li>• Technical SEO (site speed, mobile-friendliness)</li>
+                <li>• Local SEO (Google Business Profile optimization)</li>
+                <li>• SEO audits and competitor analysis</li>
+              </ul>
+            </div>
+
+            {/* Search Engine Marketing */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Marketing (SEM)/PPC</h3>
+              <p className="text-gray-600 mb-4">
+                Paid advertising campaigns for immediate results
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Google Ads (Search, Display, Shopping, YouTube)</li>
+                <li>• Bing Ads</li>
+                <li>• Keyword research and ad copywriting</li>
+                <li>• A/B testing and performance tracking</li>
               </ul>
             </div>
 
             {/* Content Marketing */}
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Content Marketing</h3>
               <p className="text-gray-600 mb-4">
-                Create valuable, engaging content that attracts and retains your target audience.
+                Engaging content that converts visitors
               </p>
               <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Blog Writing</li>
-                <li>• Video Content</li>
-                <li>• Email Marketing</li>
-                <li>• Content Strategy</li>
+                <li>• Blog writing</li>
+                <li>• Infographics</li>
+                <li>• Case studies and whitepapers</li>
+                <li>• E-books and downloadable resources</li>
+                <li>• Content strategy development</li>
               </ul>
             </div>
 
-            {/* Analytics */}
+            {/* Email Marketing */}
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Marketing</h3>
+              <p className="text-gray-600 mb-4">
+                Build relationships and drive sales through targeted email campaigns
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Email campaign design and execution</li>
+                <li>• Newsletter setup and management</li>
+                <li>• List segmentation and automation</li>
+                <li>• Performance tracking (open rate, click rate)</li>
+              </ul>
+            </div>
+
+            {/* Website Development */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Website Development & Optimization</h3>
+              <p className="text-gray-600 mb-4">
+                Custom websites that convert visitors into customers
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Custom website design (WordPress, Shopify)</li>
+                <li>• Landing page design for campaigns</li>
+                <li>• Conversion rate optimization (CRO)</li>
+                <li>• Mobile and UX optimization</li>
+              </ul>
+            </div>
+
+            {/* Graphic Design & Branding */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Graphic Design & Branding</h3>
+              <p className="text-gray-600 mb-4">
+                Professional design that strengthens your brand identity
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Logo design and brand identity</li>
+                <li>• Social media post design</li>
+                <li>• Ad banners and promotional material</li>
+                <li>• Brand guidelines development</li>
+              </ul>
+            </div>
+
+            {/* Video Marketing */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Video Marketing</h3>
+              <p className="text-gray-600 mb-4">
+                Engaging video content that tells your story
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Promotional videos</li>
+                <li>• Motion graphics and animations</li>
+                <li>• YouTube channel management</li>
+                <li>• Short-form video content (Reels, TikTok, Shorts)</li>
+              </ul>
+            </div>
+
+            {/* Analytics & Reporting */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Reporting</h3>
               <p className="text-gray-600 mb-4">
-                Track performance and make data-driven decisions with comprehensive analytics.
+                Data-driven insights to optimize your marketing efforts
               </p>
               <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Performance Tracking</li>
-                <li>• ROI Analysis</li>
-                <li>• Monthly Reports</li>
-                <li>• Strategy Optimization</li>
+                <li>• Google Analytics setup</li>
+                <li>• Monthly performance reports</li>
+                <li>• Campaign ROI tracking</li>
+                <li>• User behavior analysis (heatmaps, funnels)</li>
+              </ul>
+            </div>
+
+            {/* Online Reputation Management */}
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Online Reputation Management</h3>
+              <p className="text-gray-600 mb-4">
+                Build and maintain a positive online presence
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Review monitoring and response</li>
+                <li>• Crisis communication strategy</li>
+                <li>• Brand sentiment analysis</li>
               </ul>
             </div>
           </div>
@@ -232,7 +365,7 @@ export default function Home() {
               <div className="relative group">
                 {/* Animated background elements */}
                 <div className="absolute -top-12 -left-12 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-30 animate-pulse delay-1000"></div>
+                <div className="hidden sm:block absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-30 animate-pulse delay-1000"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-10 animate-pulse delay-500"></div>
 
                 {/* Main floating card */}
@@ -305,29 +438,36 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Meet Our Team
+              Meet Our Leadership Team
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our talented team of digital marketing experts is dedicated to delivering exceptional results for your business.
+              Our experienced leadership team brings together diverse expertise to drive innovation,
+              ensure operational excellence, and deliver exceptional results for our clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Team Member 1 - CEO */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+            {/* Team Member 1 - Founder & Managing Director */}
             <div className="group relative">
               <div className="dark-card rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:dark-card-hover">
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold mb-4">
-                    JD
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-700 shadow-lg">
+                    <Image
+                      src="/izaz.jpeg"
+                      alt="Izaz Bin Azam"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                    CEO
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    Founder
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">John Doe</h3>
-                <p className="text-blue-400 font-medium mb-3">Chief Executive Officer</p>
-                <p className="text-gray-300 text-sm mb-4">
-                  10+ years of experience in digital marketing and business strategy.
+                <h3 className="text-xl font-semibold text-white mb-2">Izaz Bin Azam</h3>
+                <p className="text-blue-400 font-medium mb-3">Founder & Managing Director</p>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  Provides vision and long-term direction, shaping organizational culture and ensuring every project aligns with client objectives and market opportunities.
                 </p>
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -335,30 +475,31 @@ export default function Home() {
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 2 - Marketing Director */}
+            {/* Team Member 2 - CEO */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold mb-4">
-                    SJ
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                    <Image
+                      src="/ceo.jpg"
+                      alt="Mushfiqur Rahman Hridoy"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
-                    Director
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    CEO
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
-                <p className="text-green-600 font-medium mb-3">Marketing Director</p>
-                <p className="text-gray-600 text-sm mb-4">
-                  Expert in SEO, PPC, and social media marketing strategies.
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mushfiqur Rahman Hridoy</h3>
+                <p className="text-green-600 font-medium mb-3">Chief Executive Officer</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Operational driving force ensuring strategies translate into actionable results, overseeing daily operations and maintaining financial discipline.
                 </p>
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="text-gray-400 hover:text-green-600 transition-colors">
@@ -366,61 +507,63 @@ export default function Home() {
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-green-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 3 - Web Developer */}
+            {/* Team Member 3 - Head of Technology & Analytics */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold mb-4">
-                    MW
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                    <Image
+                      src="/Sahib.jpg"
+                      alt="Sahib Abbas Bahar Chowdhury"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
-                    Lead
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    Tech Lead
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mike Wilson</h3>
-                <p className="text-purple-600 font-medium mb-3">Lead Web Developer</p>
-                <p className="text-gray-600 text-sm mb-4">
-                  Full-stack developer specializing in modern web technologies.
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sahib Abbas Bahar Chowdhury</h3>
+                <p className="text-purple-600 font-medium mb-3">Head of Technology & Analytics</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Leads technological innovation and data-driven approach, establishing advanced systems for campaign tracking and performance measurement.
                 </p>
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Team Member 4 - Content Specialist */}
+            {/* Team Member 4 - Head of Public Relations */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold mb-4">
-                    EB
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                    <Image
+                      src="/fatima.jpg"
+                      alt="Fatima Afroz"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                    Specialist
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    PR Lead
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Emma Brown</h3>
-                <p className="text-orange-600 font-medium mb-3">Content Specialist</p>
-                <p className="text-gray-600 text-sm mb-4">
-                  Creative content creator and social media expert.
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fatima Afroz</h3>
+                <p className="text-orange-600 font-medium mb-3">Head of Public Relations</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Manages agency's image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
                 </p>
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="text-gray-400 hover:text-orange-600 transition-colors">
@@ -428,12 +571,182 @@ export default function Home() {
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-orange-600 transition-colors">
+                </div>
+              </div>
+            </div>
+
+            {/* Team Member 5 - Head of Client Relations */}
+            <div className="group relative">
+              <div className="dark-card rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:dark-card-hover">
+                <div className="relative mb-6">
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-700 shadow-lg">
+                    <Image
+                      src="/Sadman.jpg"
+                      alt="Sadman Reza Sami"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    Client Lead
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Sadman Reza Sami</h3>
+                <p className="text-indigo-400 font-medium mb-3">Head of Client Relations</p>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  Ensures seamless, value-driven client relationships, managing long-term partnerships and exceeding client expectations.
+                </p>
+                <div className="flex justify-center space-x-3">
+                  <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
                 </div>
+              </div>
+            </div>
+
+            {/* Team Member 6 - Head of Marketing & Growth */}
+            <div className="group relative">
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div className="relative mb-6">
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                    <Image
+                      src="/Ishraq.jpg"
+                      alt="Md. Ishraq Parves"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    Growth Lead
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Md. Ishraq Parves</h3>
+                <p className="text-teal-600 font-medium mb-3">Head of Marketing & Growth</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Drives marketing innovations and business expansion, combining creativity with analytical insights for measurable growth.
+                </p>
+                <div className="flex justify-center space-x-3">
+                  <a href="#" className="text-gray-400 hover:text-teal-600 transition-colors">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Member 7 - Head of Creative */}
+            <div className="group relative">
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div className="relative mb-6">
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                    <Image
+                      src="/Salman.png"
+                      alt="Salman Salim"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    Creative Lead
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Salman Salim</h3>
+                <p className="text-pink-600 font-medium mb-3">Head of Creative</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Leads creative vision and execution, developing innovative concepts and visually compelling campaigns that capture audience attention.
+                </p>
+                <div className="flex justify-center space-x-3">
+                  <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Team Structure Overview */}
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-2xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Our Team Structure</h3>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Our leadership team is organized to ensure comprehensive coverage of all aspects of digital marketing,
+                from strategic vision to creative execution and client success.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Strategic Leadership */}
+              <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl p-6 border border-blue-700">
+                <h4 className="text-lg font-semibold text-blue-400 mb-3">Strategic Leadership</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Founder & Managing Director</li>
+                  <li>• Chief Executive Officer</li>
+                  <li>• Vision & Direction Setting</li>
+                  <li>• Organizational Culture</li>
+                </ul>
+              </div>
+
+              {/* Operations & Technology */}
+              <div className="bg-gradient-to-br from-green-900/50 to-green-800/50 rounded-xl p-6 border border-green-700">
+                <h4 className="text-lg font-semibold text-green-400 mb-3">Operations & Technology</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Technology & Analytics</li>
+                  <li>• Campaign Tracking</li>
+                  <li>• Performance Measurement</li>
+                  <li>• Data-Driven Decisions</li>
+                </ul>
+              </div>
+
+              {/* Client & Market Relations */}
+              <div className="bg-gradient-to-br from-purple-900/50 to-purple-800/50 rounded-xl p-6 border border-purple-700">
+                <h4 className="text-lg font-semibold text-purple-400 mb-3">Client & Market Relations</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Client Relations</li>
+                  <li>• Public Relations</li>
+                  <li>• Stakeholder Engagement</li>
+                  <li>• Brand Reputation</li>
+                </ul>
+              </div>
+
+              {/* Growth & Creative */}
+              <div className="bg-gradient-to-br from-orange-900/50 to-orange-800/50 rounded-xl p-6 border border-orange-700">
+                <h4 className="text-lg font-semibold text-orange-400 mb-3">Growth & Creative</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Marketing & Growth</li>
+                  <li>• Creative Direction</li>
+                  <li>• Campaign Innovation</li>
+                  <li>• Brand Storytelling</li>
+                </ul>
+              </div>
+
+              {/* Core Values */}
+              <div className="bg-gradient-to-br from-indigo-900/50 to-indigo-800/50 rounded-xl p-6 border border-indigo-700">
+                <h4 className="text-lg font-semibold text-indigo-400 mb-3">Core Values</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• Innovation & Excellence</li>
+                  <li>• Client-Centric Approach</li>
+                  <li>• Data-Driven Results</li>
+                  <li>• Continuous Improvement</li>
+                </ul>
+              </div>
+
+              {/* Success Metrics */}
+              <div className="bg-gradient-to-br from-teal-900/50 to-teal-800/50 rounded-xl p-6 border border-teal-700">
+                <h4 className="text-lg font-semibold text-teal-400 mb-3">Success Metrics</h4>
+                <ul className="text-gray-300 text-sm space-y-2">
+                  <li>• ROI Optimization</li>
+                  <li>• Client Satisfaction</li>
+                  <li>• Market Growth</li>
+                  <li>• Team Excellence</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -441,20 +754,20 @@ export default function Home() {
           {/* Team Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
-              <div className="text-gray-300 font-medium">Team Members</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">7</div>
+              <div className="text-gray-300 font-medium">Leadership Team</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">8+</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
+              <div className="text-gray-300 font-medium">Total Team Members</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">8+</div>
               <div className="text-gray-300 font-medium">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300 font-medium">Certifications</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300 font-medium">Support</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">500+</div>
+              <div className="text-gray-300 font-medium">Happy Clients</div>
             </div>
           </div>
         </div>
@@ -484,7 +797,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold text-white">Email</div>
-                    <div className="text-gray-300">hello@zomingdigital.com</div>
+                    <div className="text-gray-300">zoomindigital03@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -495,7 +808,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold text-white">Phone</div>
-                    <div className="text-gray-300">+1 (555) 123-4567</div>
+                    <div className="text-gray-300">+880 1728-248355</div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -507,7 +820,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold text-white">Address</div>
-                    <div className="text-gray-300">123 Digital Street, Tech City, TC 12345</div>
+                    <div className="text-gray-300">2nd floor, House no 84, Road no 3, Shah Garibullah Housing society, Chittagong, Bangladesh</div>
                   </div>
                 </div>
               </div>
@@ -565,7 +878,7 @@ export default function Home() {
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.555-2.005.959-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                   </svg>
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
