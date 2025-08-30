@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesPage() {
     return (
@@ -18,11 +19,11 @@ export default function ServicesPage() {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-8">
-                                <a href="/" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                                <a href="/services" className="text-blue-400 px-3 py-2 text-sm font-medium">Services</a>
-                                <a href="/#about" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                                <a href="/#team" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Team</a>
-                                <a href="/#contact" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                                <Link href="/" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Home</Link>
+                                <Link href="/services" className="text-blue-400 px-3 py-2 text-sm font-medium">Services</Link>
+                                <Link href="/#about" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">About</Link>
+                                <Link href="/#team" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Team</Link>
+                                <Link href="/#contact" className="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Contact</Link>
                             </div>
                         </div>
                     </div>

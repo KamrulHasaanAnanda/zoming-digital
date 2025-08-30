@@ -563,7 +563,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Fatima Afroz</h3>
                 <p className="text-orange-600 font-medium mb-3">Head of Public Relations</p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Manages agency's image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
+                  Manages agency&apos;s image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
                 </p>
                 <div className="flex justify-center space-x-3">
                   <a href="#" className="text-gray-400 hover:text-orange-600 transition-colors">
@@ -781,7 +781,7 @@ export default function Home() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Let's discuss how we can help your business grow online. Contact us today for a free consultation.
+              Let&apos;s discuss how we can help your business grow online. Contact us today for a free consultation.
             </p>
           </div>
 
