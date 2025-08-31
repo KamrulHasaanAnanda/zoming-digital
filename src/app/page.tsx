@@ -92,33 +92,88 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen pt-16 dark-bg flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+      <section id="home" className="min-h-screen pt-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-yellow-500/5 rounded-full blur-2xl animate-pulse delay-700"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-300"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Transform Your <span className="text-blue-400">Digital Presence</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                <span className=" font-bold text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zoming Digital</span> helps you grow faster online with powerful digital marketing solutions. From showcasing your brand through stunning visuals to driving engagement with social media marketing and creative design, we build strategies that deliver measurable results and real growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Get Started
-                </button>
-                <button className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                  Learn More
-                </button>
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-block">
+                <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  🚀 Digital Marketing Excellence
+                </span>
               </div>
+
+              {/* Main Heading */}
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Transform Your{' '}
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                  Digital Presence
+                </span>
+              </h1>
+
+              {/* Description */}
+              <div className="space-y-4">
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  <span className="font-bold text-3xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                    Zoming Digital
+                  </span>{' '}
+                  helps you grow faster online with powerful digital marketing solutions.
+                </p>
+                <p className="text-lg text-gray-400 leading-relaxed">
+                  From showcasing your brand through stunning visuals to driving engagement with social media marketing and creative design, we build strategies that deliver measurable results and real growth.
+                </p>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 py-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-1">500+</div>
+                  <div className="text-sm text-gray-400">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-1">1000+</div>
+                  <div className="text-sm text-gray-400">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-1">95%</div>
+                  <div className="text-sm text-gray-400">Success Rate</div>
+                </div>
+              </div>
+
+
             </div>
-            <div className="flex justify-center lg:justify-end">
-              <Image
-                src="/ZD.png"
-                alt="Zoming Digital"
-                width={400}
-                height={400}
-                className="w-full max-w-md"
-              />
+
+            {/* Image Section */}
+            <div className="flex justify-center lg:justify-end relative">
+              <div className="relative group">
+                {/* Glowing background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
+
+                {/* Main image container */}
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-8 shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-500 transform group-hover:scale-105">
+                  <Image
+                    src="/ZD.png"
+                    alt="Zoming Digital"
+                    width={400}
+                    height={400}
+                    className="w-full max-w-md relative z-10"
+                  />
+
+                  {/* Floating elements */}
+                  <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 animate-bounce"></div>
+                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-bounce delay-1000"></div>
+                  <div className="absolute top-1/2 left-4 w-8 h-8 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full opacity-20 animate-bounce delay-500"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
