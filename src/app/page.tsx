@@ -100,8 +100,7 @@ export default function Home() {
                 Transform Your <span className="text-blue-400">Digital Presence</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We help businesses grow online with comprehensive digital marketing solutions.
-                From SEO to social media, we create strategies that drive real results.
+                <span className=" font-bold text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zoming Digital</span> helps you grow faster online with powerful digital marketing solutions. From showcasing your brand through stunning visuals to driving engagement with social media marketing and creative design, we build strategies that deliver measurable results and real growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
@@ -126,209 +125,368 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="min-h-screen py-20 bg-gray-800 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
+      <section id="services" className="min-h-screen py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-6">
+              <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                What We Offer
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              Our Premium Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We offer comprehensive digital marketing solutions to help your business thrive in the digital landscape.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Social Media Marketing */}
-            <div className="dark-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:dark-card-hover">
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-500 hover:scale-105 hover:border-pink-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors">Social Media Marketing</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Comprehensive social media strategies to boost your brand presence and drive engagement
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mr-3"></span>
+                    Social media strategy development
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mr-3"></span>
+                    Content creation and management
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mr-3"></span>
+                    Paid ad campaigns (Facebook, Instagram, LinkedIn)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mr-3"></span>
+                    Community management
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mr-3"></span>
+                    Influencer marketing
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Social Media Marketing (SMM)</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive social media strategies to boost your brand presence
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Social media strategy development</li>
-                <li>• Content creation and management</li>
-                <li>• Paid ad campaigns (Facebook, Instagram, LinkedIn)</li>
-                <li>• Community management (comments, inboxes, DMs)</li>
-                <li>• Influencer marketing</li>
-              </ul>
             </div>
 
             {/* Search Engine Optimization */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 hover:scale-105 hover:border-blue-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-green-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">Search Engine Optimization</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Improve your search rankings and drive organic traffic to your website
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mr-3"></span>
+                    On-page SEO optimization
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mr-3"></span>
+                    Off-page SEO (backlinks, guest posts)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mr-3"></span>
+                    Technical SEO (site speed, mobile-friendliness)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mr-3"></span>
+                    Local SEO optimization
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mr-3"></span>
+                    SEO audits and competitor analysis
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization (SEO)</h3>
-              <p className="text-gray-600 mb-4">
-                Improve your search rankings and drive organic traffic
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• On-page SEO (meta tags, keywords, URL structure)</li>
-                <li>• Off-page SEO (backlinks, guest posts)</li>
-                <li>• Technical SEO (site speed, mobile-friendliness)</li>
-                <li>• Local SEO (Google Business Profile optimization)</li>
-                <li>• SEO audits and competitor analysis</li>
-              </ul>
             </div>
 
             {/* Search Engine Marketing */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 hover:scale-105 hover:border-orange-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">PPC & SEM</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Paid advertising campaigns for immediate results and targeted traffic
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mr-3"></span>
+                    Google Ads (Search, Display, Shopping, YouTube)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mr-3"></span>
+                    Bing Ads campaigns
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mr-3"></span>
+                    Keyword research and ad copywriting
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mr-3"></span>
+                    A/B testing and performance tracking
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Marketing (SEM)/PPC</h3>
-              <p className="text-gray-600 mb-4">
-                Paid advertising campaigns for immediate results
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Google Ads (Search, Display, Shopping, YouTube)</li>
-                <li>• Bing Ads</li>
-                <li>• Keyword research and ad copywriting</li>
-                <li>• A/B testing and performance tracking</li>
-              </ul>
             </div>
 
             {/* Content Marketing */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-500 hover:scale-105 hover:border-green-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors">Content Marketing</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Engaging content that converts visitors and builds brand authority
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full mr-3"></span>
+                    Blog writing and articles
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full mr-3"></span>
+                    Infographics and visual content
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full mr-3"></span>
+                    Case studies and whitepapers
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full mr-3"></span>
+                    E-books and downloadable resources
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full mr-3"></span>
+                    Content strategy development
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Content Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                Engaging content that converts visitors
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Blog writing</li>
-                <li>• Infographics</li>
-                <li>• Case studies and whitepapers</li>
-                <li>• E-books and downloadable resources</li>
-                <li>• Content strategy development</li>
-              </ul>
             </div>
 
             {/* Email Marketing */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 hover:border-red-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">Email Marketing</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Build relationships and drive sales through targeted email campaigns
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mr-3"></span>
+                    Email campaign design and execution
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mr-3"></span>
+                    Newsletter setup and management
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mr-3"></span>
+                    List segmentation and automation
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mr-3"></span>
+                    Performance tracking and analytics
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                Build relationships and drive sales through targeted email campaigns
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Email campaign design and execution</li>
-                <li>• Newsletter setup and management</li>
-                <li>• List segmentation and automation</li>
-                <li>• Performance tracking (open rate, click rate)</li>
-              </ul>
             </div>
 
             {/* Website Development */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-indigo-500/25 transition-all duration-500 hover:scale-105 hover:border-indigo-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">Web Development</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Custom websites that convert visitors into customers and drive growth
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-3"></span>
+                    Custom website design (WordPress, Shopify)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-3"></span>
+                    Landing page design for campaigns
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-3"></span>
+                    Conversion rate optimization (CRO)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mr-3"></span>
+                    Mobile and UX optimization
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Website Development & Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Custom websites that convert visitors into customers
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Custom website design (WordPress, Shopify)</li>
-                <li>• Landing page design for campaigns</li>
-                <li>• Conversion rate optimization (CRO)</li>
-                <li>• Mobile and UX optimization</li>
-              </ul>
             </div>
 
             {/* Graphic Design & Branding */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 hover:scale-105 hover:border-orange-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">Graphic Design</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Professional design that strengthens your brand identity and visual appeal
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mr-3"></span>
+                    Logo design and brand identity
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mr-3"></span>
+                    Social media post design
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mr-3"></span>
+                    Ad banners and promotional material
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mr-3"></span>
+                    Brand guidelines development
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Graphic Design & Branding</h3>
-              <p className="text-gray-600 mb-4">
-                Professional design that strengthens your brand identity
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Logo design and brand identity</li>
-                <li>• Social media post design</li>
-                <li>• Ad banners and promotional material</li>
-                <li>• Brand guidelines development</li>
-              </ul>
             </div>
 
             {/* Video Marketing */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 hover:scale-105 hover:border-purple-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">Video Marketing</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Engaging video content that tells your story and captivates your audience
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mr-3"></span>
+                    Promotional videos and commercials
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mr-3"></span>
+                    Motion graphics and animations
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mr-3"></span>
+                    YouTube channel management
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mr-3"></span>
+                    Short-form video content (Reels, TikTok, Shorts)
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Video Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                Engaging video content that tells your story
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Promotional videos</li>
-                <li>• Motion graphics and animations</li>
-                <li>• YouTube channel management</li>
-                <li>• Short-form video content (Reels, TikTok, Shorts)</li>
-              </ul>
             </div>
 
             {/* Analytics & Reporting */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+            <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 hover:border-teal-500/50 relative overflow-hidden">
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-teal-400 transition-colors">Analytics & Reporting</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Data-driven insights to optimize your marketing efforts and maximize ROI
+                </p>
+                <ul className="text-sm text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mr-3"></span>
+                    Google Analytics setup and configuration
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mr-3"></span>
+                    Monthly performance reports
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mr-3"></span>
+                    Campaign ROI tracking and analysis
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full mr-3"></span>
+                    User behavior analysis (heatmaps, funnels)
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Reporting</h3>
-              <p className="text-gray-600 mb-4">
-                Data-driven insights to optimize your marketing efforts
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Google Analytics setup</li>
-                <li>• Monthly performance reports</li>
-                <li>• Campaign ROI tracking</li>
-                <li>• User behavior analysis (heatmaps, funnels)</li>
-              </ul>
             </div>
 
             {/* Online Reputation Management */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Online Reputation Management</h3>
-              <p className="text-gray-600 mb-4">
-                Build and maintain a positive online presence
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Review monitoring and response</li>
-                <li>• Crisis communication strategy</li>
-                <li>• Brand sentiment analysis</li>
-              </ul>
-            </div>
+
           </div>
         </div>
       </section>
@@ -423,9 +581,9 @@ export default function Home() {
                   </div>
 
                   {/* Floating achievement badge */}
-                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-12 animate-bounce">
+                  {/* <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-12 animate-bounce">
                     🏆 Award Winner
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -434,239 +592,287 @@ export default function Home() {
       </section>
 
       {/* Our Team Section */}
-      <section id="team" className="min-h-screen py-20 bg-gray-800 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section id="team" className="min-h-screen py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-6">
+              <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                Leadership
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
               Meet Our Leadership Team
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Our experienced leadership team brings together diverse expertise to drive innovation,
               ensure operational excellence, and deliver exceptional results for our clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16 items-stretch">
             {/* Team Member 1 - Founder & Managing Director */}
-            <div className="group relative">
-              <div className="dark-card rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:dark-card-hover">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-700 shadow-lg">
-                    <Image
-                      src="/izaz.jpeg"
-                      alt="Izaz Bin Azam"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-500 hover:scale-105 hover:border-yellow-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-yellow-500/50 shadow-2xl group-hover:border-yellow-400 transition-colors">
+                      <Image
+                        src="/izaz.jpeg"
+                        alt="Izaz Bin Azam"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      Founder
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    Founder
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Izaz Bin Azam</h3>
+                  <p className="text-yellow-400 font-semibold mb-4 text-lg">Founder & Managing Director</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Provides vision and long-term direction, shaping organizational culture and ensuring every project aligns with client objectives and market opportunities.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors p-2 rounded-full hover:bg-yellow-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Izaz Bin Azam</h3>
-                <p className="text-blue-400 font-medium mb-3">Founder & Managing Director</p>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  Provides vision and long-term direction, shaping organizational culture and ensuring every project aligns with client objectives and market opportunities.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Team Member 2 - CEO */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                      src="/ceo.jpg"
-                      alt="Mushfiqur Rahman Hridoy"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 hover:scale-105 hover:border-blue-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-green-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-500/50 shadow-2xl group-hover:border-blue-400 transition-colors">
+                      <Image
+                        src="/ceo.jpg"
+                        alt="Mushfiqur Rahman Hridoy"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      CEO
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    CEO
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Mushfiqur Rahman Hridoy</h3>
+                  <p className="text-blue-400 font-semibold mb-4 text-lg">Chief Executive Officer</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Operational driving force ensuring strategies translate into actionable results, overseeing daily operations and maintaining financial discipline.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-full hover:bg-blue-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mushfiqur Rahman Hridoy</h3>
-                <p className="text-green-600 font-medium mb-3">Chief Executive Officer</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Operational driving force ensuring strategies translate into actionable results, overseeing daily operations and maintaining financial discipline.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-green-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
+
             {/* Team Member 3 - Head of Technology & Analytics */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                      src="/Sahib.jpg"
-                      alt="Sahib Abbas Bahar Chowdhury"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 hover:scale-105 hover:border-purple-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-purple-500/50 shadow-2xl group-hover:border-purple-400 transition-colors">
+                      <Image
+                        src="/Sahib.jpg"
+                        alt="Sahib Abbas Bahar Chowdhury"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      Tech Lead
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    Tech Lead
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Sahib Abbas Bahar Chowdhury</h3>
+                  <p className="text-purple-400 font-semibold mb-4 text-lg">Head of Technology & Analytics</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Leads technological innovation and data-driven approach, establishing advanced systems for campaign tracking and performance measurement.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors p-2 rounded-full hover:bg-purple-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sahib Abbas Bahar Chowdhury</h3>
-                <p className="text-purple-600 font-medium mb-3">Head of Technology & Analytics</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Leads technological innovation and data-driven approach, establishing advanced systems for campaign tracking and performance measurement.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Team Member 4 - Head of Public Relations */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                      src="/fatima.jpg"
-                      alt="Fatima Afroz"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 hover:scale-105 hover:border-orange-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-orange-500/50 shadow-2xl group-hover:border-orange-400 transition-colors">
+                      <Image
+                        src="/fatima.jpg"
+                        alt="Fatima Afroz"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      PR Lead
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    PR Lead
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">Fatima Afroz</h3>
+                  <p className="text-orange-400 font-semibold mb-4 text-lg">Head of Public Relations</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Manages agency&apos;s image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors p-2 rounded-full hover:bg-orange-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fatima Afroz</h3>
-                <p className="text-orange-600 font-medium mb-3">Head of Public Relations</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Manages agency&apos;s image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-orange-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Team Member 5 - Head of Client Relations */}
-            <div className="group relative">
-              <div className="dark-card rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:dark-card-hover">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-700 shadow-lg">
-                    <Image
-                      src="/Sadman.jpg"
-                      alt="Sadman Reza Sami"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-indigo-500/25 transition-all duration-500 hover:scale-105 hover:border-indigo-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-indigo-500/50 shadow-2xl group-hover:border-indigo-400 transition-colors">
+                      <Image
+                        src="/Sadman.jpg"
+                        alt="Sadman Reza Sami"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      Client Lead
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    Client Lead
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Sadman Reza Sami</h3>
+                  <p className="text-indigo-400 font-semibold mb-4 text-lg">Head of Client Relations</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Ensures seamless, value-driven client relationships, managing long-term partnerships and exceeding client expectations.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors p-2 rounded-full hover:bg-indigo-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Sadman Reza Sami</h3>
-                <p className="text-indigo-400 font-medium mb-3">Head of Client Relations</p>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  Ensures seamless, value-driven client relationships, managing long-term partnerships and exceeding client expectations.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Team Member 6 - Head of Marketing & Growth */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                      src="/Ishraq.jpg"
-                      alt="Md. Ishraq Parves"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 hover:border-teal-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-500/50 shadow-2xl group-hover:border-teal-400 transition-colors">
+                      <Image
+                        src="/Ishraq.jpg"
+                        alt="Md. Ishraq Parves"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      Growth Lead
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    Growth Lead
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">Md. Ishraq Parves</h3>
+                  <p className="text-teal-400 font-semibold mb-4 text-lg">Head of Marketing & Growth</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Drives marketing innovations and business expansion, combining creativity with analytical insights for measurable growth.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors p-2 rounded-full hover:bg-teal-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Md. Ishraq Parves</h3>
-                <p className="text-teal-600 font-medium mb-3">Head of Marketing & Growth</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Drives marketing innovations and business expansion, combining creativity with analytical insights for measurable growth.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-teal-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Team Member 7 - Head of Creative */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                <div className="relative mb-6">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
-                    <Image
-                      src="/Salman.png"
-                      alt="Salman Salim"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="group relative h-full">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 p-8 rounded-2xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-500 hover:scale-105 hover:border-pink-500/50 relative overflow-hidden h-full flex flex-col">
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-rose-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <div className="relative mb-6">
+                    <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden border-4 border-pink-500/50 shadow-2xl group-hover:border-pink-400 transition-colors">
+                      <Image
+                        src="/Salman.png"
+                        alt="Salman Salim"
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg">
+                      Creative Lead
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                    Creative Lead
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Salman Salim</h3>
+                  <p className="text-pink-400 font-semibold mb-4 text-lg">Head of Creative</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
+                    Leads creative vision and execution, developing innovative concepts and visually compelling campaigns that capture audience attention.
+                  </p>
+                  <div className="flex justify-center space-x-4 mt-auto">
+                    <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors p-2 rounded-full hover:bg-pink-500/10">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
                   </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Salman Salim</h3>
-                <p className="text-pink-600 font-medium mb-3">Head of Creative</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Leads creative vision and execution, developing innovative concepts and visually compelling campaigns that capture audience attention.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
