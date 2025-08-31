@@ -153,7 +153,7 @@ export default function Home() {
             </div>
 
             {/* Image Section */}
-            <div className="flex justify-center lg:justify-end relative">
+            <div className="sm:flex justify-center lg:justify-end relative hidden">
               <div className="relative group">
                 {/* Glowing background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
