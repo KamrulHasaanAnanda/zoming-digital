@@ -565,11 +565,11 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
                   <div className="text-gray-300">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">1000+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">200+</div>
                   <div className="text-gray-300">Projects Completed</div>
                 </div>
               </div>

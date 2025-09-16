@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -7,6 +7,17 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#111827" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Zoomin Digital — Performance-driven marketing & creative engineering",
@@ -18,16 +29,6 @@ export const metadata: Metadata = {
   applicationName: "Zoomin Digital",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
-  colorScheme: "dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#111827" },
-  ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   formatDetection: {
     email: false,
     address: false,
@@ -75,15 +76,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/ZD.png", sizes: "any", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/ZD.png", sizes: "32x32", type: "image/png" },
     ],
+    shortcut: "/ZD.png",
     apple: [
       { url: "/ZD.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
         rel: "mask-icon",
-        url: "/ZD.png",
+        url: "/favicon.svg",
         color: "#111827",
       },
     ],
