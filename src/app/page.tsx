@@ -136,11 +136,11 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 py-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-1">500+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-1">50+</div>
                   <div className="text-sm text-gray-400">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-1">1000+</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-1">200+</div>
                   <div className="text-sm text-gray-400">Projects Completed</div>
                 </div>
                 <div className="text-center">
@@ -606,11 +606,11 @@ export default function Home() {
                   {/* Animated stats with hover effects */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     <div className="group/stat text-center p-4 bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl border border-blue-700 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                      <div className="text-3xl font-bold text-blue-400 group-hover/stat:text-blue-300 transition-colors">500+</div>
+                      <div className="text-3xl font-bold text-blue-400 group-hover/stat:text-blue-300 transition-colors">50+</div>
                       <div className="text-xs text-gray-300 font-medium">Happy Clients</div>
                     </div>
                     <div className="group/stat text-center p-4 bg-gradient-to-br from-green-900/50 to-green-800/50 rounded-xl border border-green-700 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                      <div className="text-3xl font-bold text-green-400 group-hover/stat:text-green-300 transition-colors">1000+</div>
+                      <div className="text-3xl font-bold text-green-400 group-hover/stat:text-green-300 transition-colors">200+</div>
                       <div className="text-xs text-gray-300 font-medium">Projects</div>
                     </div>
                   </div>
