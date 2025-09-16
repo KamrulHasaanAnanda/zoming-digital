@@ -698,13 +698,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Provides vision and long-term direction, shaping organizational culture and ensuring every project aligns with client objectives and market opportunities.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors p-2 rounded-full hover:bg-yellow-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -735,13 +735,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Operational driving force ensuring strategies translate into actionable results, overseeing daily operations and maintaining financial discipline.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-full hover:bg-blue-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -773,13 +773,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Leads technological innovation and data-driven approach, establishing advanced systems for campaign tracking and performance measurement.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors p-2 rounded-full hover:bg-purple-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -810,13 +810,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Manages agency&apos;s image and reputation, overseeing media outreach and stakeholder engagement to ensure positive brand presence.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors p-2 rounded-full hover:bg-orange-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -847,13 +847,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Ensures seamless, value-driven client relationships, managing long-term partnerships and exceeding client expectations.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors p-2 rounded-full hover:bg-indigo-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -884,13 +884,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Drives marketing innovations and business expansion, combining creativity with analytical insights for measurable growth.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors p-2 rounded-full hover:bg-teal-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -921,13 +921,13 @@ export default function Home() {
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
                     Leads creative vision and execution, developing innovative concepts and visually compelling campaigns that capture audience attention.
                   </p>
-                  <div className="flex justify-center space-x-4 mt-auto">
+                  {/* <div className="flex justify-center space-x-4 mt-auto">
                     <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors p-2 rounded-full hover:bg-pink-500/10">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -1023,11 +1023,11 @@ export default function Home() {
               <div className="text-gray-300 font-medium">Total Team Members</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">8+</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">4+</div>
               <div className="text-gray-300 font-medium">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">500+</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">50+</div>
               <div className="text-gray-300 font-medium">Happy Clients</div>
             </div>
           </div>
