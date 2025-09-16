@@ -49,7 +49,7 @@ export default function Home() {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 h-screen">
                 <a
                   href="#home"
                   className="text-white hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors"
